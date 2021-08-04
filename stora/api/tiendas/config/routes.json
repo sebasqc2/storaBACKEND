@@ -1,0 +1,59 @@
+{
+    "routes": [{
+            "method": "GET",
+            "path": "/tiendas",
+            "handler": "tiendas.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/tiendas/count",
+            "handler": "tiendas.count",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/tiendas/:id",
+            "handler": "tiendas.findOne",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/tiendas",
+            "handler": "tiendas.create",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/tiendas/:id",
+            "handler": "tiendas.update",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/tiendas/:id",
+            "handler": "tiendas.delete",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/tiendas/nombre/:nombre",
+            "handler": "tiendas.findbynombre",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiendas",
+  "info": {
+    "name": "Tiendas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nit": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "telefono": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "ubicacion": {
+      "model": "ubicacion"
+    },
+    "productos": {
+      "collection": "productos",
+      "via": "tienda"
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "tiendas"
+    }
+  }
+}

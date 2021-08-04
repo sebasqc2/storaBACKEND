@@ -1188,7 +1188,11 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "nombre",
+          "nacimiento",
+          "direccion",
+          "telefono"
         ],
         "properties": {
           "id": {
@@ -1250,13 +1254,78 @@
                 "type": "string"
               }
             }
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "nacimiento": {
+            "type": "string",
+            "format": "date"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "pedidos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "codigo",
+                "fecha"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "codigo": {
+                  "type": "integer"
+                },
+                "fecha": {
+                  "type": "string"
+                },
+                "valoracion": {
+                  "type": "integer"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "productos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cantidades": {
+                  "type": "object"
+                },
+                "total": {
+                  "type": "integer"
+                },
+                "estado": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "nombre",
+          "nacimiento",
+          "direccion",
+          "telefono"
         ],
         "properties": {
           "username": {
@@ -1291,6 +1360,25 @@
           },
           "role": {
             "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "nacimiento": {
+            "type": "string",
+            "format": "date"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "pedidos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

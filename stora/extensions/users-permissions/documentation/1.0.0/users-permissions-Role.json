@@ -528,7 +528,11 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "nombre",
+                "nacimiento",
+                "direccion",
+                "telefono"
               ],
               "properties": {
                 "id": {
@@ -560,6 +564,24 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "nacimiento": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                },
+                "telefono": {
+                  "type": "string"
+                },
+                "pedidos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ubicacions",
+  "info": {
+    "name": "Ubicacion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "codigo": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "pais": {
+      "type": "string",
+      "required": true
+    },
+    "ciudad": {
+      "type": "string",
+      "required": true
+    },
+    "barrio": {
+      "type": "string",
+      "required": true
+    },
+    "detalles": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

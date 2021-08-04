@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "Pedido",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "codigo": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "fecha": {
+      "type": "datetime",
+      "required": true
+    },
+    "valoracion": {
+      "type": "integer"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pedidos"
+    },
+    "productos": {
+      "collection": "productos",
+      "via": "pedido"
+    },
+    "cantidades": {
+      "type": "json"
+    },
+    "total": {
+      "type": "biginteger"
+    },
+    "estado": {
+      "type": "string"
+    }
+  }
+}
